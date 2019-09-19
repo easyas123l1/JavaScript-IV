@@ -42,11 +42,6 @@ class GameObject{
   * takeDamage() // prototype method -> returns the string '<object name> took damage.'
   * should inherit destroy() from GameObject's prototype
 */
-function CharacterStats(attributes) {
-  this.healthPoints = attributes.healthPoints;
-  this.currentHealth = this.healthPoints;
-  GameObject.call(this, attributes);
-}
 
 class CharacterStats extends GameObject{
   constructor(attributes){
@@ -219,10 +214,6 @@ class Humanoid extends CharacterStats{
     weapon: 'Evil Sword',
     language: 'Common Tongue',
   });
-
-
-
-
 
   console.log(`${ourHero.name} sieges upon ${ourVillain.name}`);
   console.log(`${ourHero.name} gets some strikes with ${ourHero.weapon} doing ${Hero.power} damage to ${ourVillain.name}`);
