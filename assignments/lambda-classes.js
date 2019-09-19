@@ -37,9 +37,11 @@ class Students extends Person {
     this.grade = Math.floor(Math.random() * 100) +1;
   }
   listsSubjects() {
+    let returnString = ''
     for (let subject in this.favSubjects) {
-      return(`I love ${this.favSubjects[subject]}`);
+      returnString += (`I love ${this.favSubjects[subject]}! \n`);
     }
+    return returnString;
   }
   PRAssignment(subject) {
     return `${this.name} has submitted a PR for ${subject}`;
@@ -85,7 +87,7 @@ const Kevin = new Students({
   age: 26,
   className: 'Web24',
   previousBackground: 'Musician',
-  favSubjects: ['Music']
+  favSubjects: ['Music', 'Video games', 'Code']
 })
 
 
